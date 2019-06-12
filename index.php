@@ -28,7 +28,35 @@ $f3->route('GET /', function()
 {
     // Display home view
     $view = new Template();
+    echo $view->render('views/header.html');
     echo $view->render('views/home.html');
+});
+
+// Define a calendar route
+$f3->route('GET /calendar', function()
+{
+    // Display home view
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render('views/calendar.html');
+});
+
+// Define a register route
+$f3->route('GET|POST /register', function()
+{
+    // Display home view
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render('views/register.html');
+});
+
+// Define a login route
+$f3->route('GET|POST /login', function()
+{
+    // Display home view
+    $view = new Template();
+    echo $view->render('views/header.html');
+    echo $view->render('views/login.html');
 });
 
 // Run Fat-Free
